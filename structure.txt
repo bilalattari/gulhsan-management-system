@@ -1,0 +1,28 @@
+COLLECTIONS
+
+1.USER
+  name
+  email
+  password
+  platform => google
+  role => enum-student-teacher-admin
+
+2.COURSES
+  title
+  description
+  duration
+
+3.BATCHES
+  title
+  description
+  course => course_id . objectId
+
+4.SECTION
+  title
+  description
+  course   => course_id . objectId
+  batch    => batch_id . objectId
+  teacher  => user_id with role teacher
+  status   => pending , ongoing , merged , finished 
+
+
