@@ -135,11 +135,11 @@ export default function User() {
           </div>
         )}
 
-        <div className="grid grid-cols-3 gap-10">
+        <div className="grid grid-cols-3 my-10 gap-10">
           {courses?.map((course) => {
             return (
               <div className="border rounded overflow-hidden">
-                <img src={course.thumbnail} className="h-32 w-full" />
+                <img src={course.thumbnail} className="h-48 w-full" />
                 <div className="p-2 ">
                   <h1 className="font-bold">{course.title}</h1>
                   <h1>{course.description}</h1>

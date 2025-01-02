@@ -9,6 +9,7 @@ import User from "./pages/user/user";
 import Teacher from "./pages/teacher/teacher";
 import { AuthContext } from "./context/AuthContext";
 import Cookies from "js-cookie";
+import Students from "./pages/students/students";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -19,7 +20,7 @@ function App() {
     <Routes>
       <Route path="/" element={user ? <Navigate to={"/user"} /> : <Login />} />
       <Route path="/admin" element={<Admin />} />
-      <Route path="/user" element={user ? <User /> : <Navigate to={"/"} />} />
+      <Route path="/user" element={user ? <Students /> : <Navigate to={"/"} />} />
       <Route path="/teacher" element={<Teacher />} />
     </Routes>
   );
